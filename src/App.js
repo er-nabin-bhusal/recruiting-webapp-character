@@ -1,25 +1,23 @@
-import { useState } from 'react';
 import './App.css';
-import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
+import AttributeControl from './components/AttributeControl.js';
+import ClassList from './components/ClassList.js';
+import SkillControl from './components/SkillControl.js';
 
 
-function App() {
-  const [num, setNum] = useState(0);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React Coding Exercise</h1>
-      </header>
-      <section className="App-section">
-        <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
+const App = () => {
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>React Coding Exercise</h1>
+            </header>
+            <section className="App-section">
+                <AttributeControl />
+                <ClassList />
+                <SkillControl />
+            </section>
         </div>
-      </section>
-    </div>
-  );
+    );
 }
 
 export default App;
